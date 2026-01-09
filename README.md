@@ -1,8 +1,35 @@
 # Selego – Intern Technical Test
 
 **⏱ Time Allocation: 3 hours maximum**
+**⏱ Actual duration: 3 hours and 20 minutes**
+---
+
+# Technical Test Submission - Amir Djelidi
+
+Here is my submission for the Fullstack technical test.
+The application allows users to manage projects, track associated expenses, and monitor budgets in real-time.
+
+## Implemented Features
+
+- **Project Management:** Create, list, view details, and delete projects.
+- **Expense Tracking:** Add and remove expenses linked to specific projects.
+- **Budget Logic:** Real-time calculation of total spend with visual alerts when the budget is exceeded.
+- **Bonus:** Automatic email notification (via Brevo) triggered when a project goes over budget.
+
+## Technical Choices & Architecture
+
+- **Data Structure:** I used a **Flat Data Structure** for expenses (linked via `projectId`) to avoid nested arrays in MongoDB, ensuring scalability.
+- **Code Quality:** I applied the **Early Return** pattern in controllers for better readability and cleaner error handling.
+- **Architecture:** Strict separation of concerns (Routes / Controllers / Models).
+- **KISS Principle:** Kept the UI simple and functional using standard HTML/Tailwind classes .
+
+## How to run
+
+1. Install dependencies: `npm install`
+2. Start the development server: `npm run dev`
 
 ---
+
 
 ## Table of Contents
 
