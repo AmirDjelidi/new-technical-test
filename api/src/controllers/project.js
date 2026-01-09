@@ -7,7 +7,9 @@ const Project = require("../models/project"); // Ton modèle Mongoose
 router.post("/", passport.authenticate("user", { session: false }), async (req, res) => {
   try {
     const { name, description, budget } = req.body;
-
+    if (!name || !budget) {
+      return res.status(400).json({ ok: false, error: "Missing parameters" });
+    }
     const newProject = await Project.create({ name, description, budget });
 
     return res.status(200).json({ ok: true, data: newProject });
